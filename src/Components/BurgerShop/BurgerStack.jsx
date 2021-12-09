@@ -1,9 +1,21 @@
 import React from "react"
+import Ingredient from "./Ingredient"
 
-const BurgerStack = () => {
+const BurgerStack = ({stack, removeFromBurger}) => {
+  const stackList = stack.map((ele, idx) => {
+    return (
+      <Ingredient 
+        ingredient={ele}
+        idx={idx}
+        key={idx}
+        removeFromBurger={removeFromBurger}
+      />
+    )
+  })
+
   return (
     <ul className="burger-stack">
-      Use the map function and the Ingredient component here
+      {stackList}
     </ul>
   )
 }

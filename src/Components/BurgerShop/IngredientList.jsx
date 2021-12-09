@@ -1,22 +1,22 @@
 import React from "react"
-import Ingredient from "./Ingredient"
 
-const IngredientList = ({ingredients}) => {
-	const iList= ingredients.map((ele, idx)=>{
-		return(<Ingredient
-    name={ele.name}
-    color={ele.color}
-		type={ele.type}
-    key={idx}
-		isList={true}
-		
-    />)
+import Ingredient from './Ingredient'
+
+const IngredientList = ({ingredients, addToBurger}) => {	
+	const iList = ingredients.map((ele, idx) => {
+		return (
+			<Ingredient 
+				ingredient={ele}
+				idx={idx}
+				key={idx}
+				isList={true}
+				addToBurger={addToBurger}
+			/>
+		)
 	})
-	
-	return (
 
+	return (
 		<ul>
-			
 			{iList}
 		</ul>
 	)
