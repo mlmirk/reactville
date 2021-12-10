@@ -9,14 +9,14 @@ import { products } from '../../data/market-data'
 
 const SuperMarket = () => {
   
-  
   const[cart,setCart]=useState([])
-  const[productCategoty, setProductCategory]= useState('produce')
+  const[productCategory, setProductCategory]= useState('Produce')
+  console.log(productCategory)
   return (
     <div className="super-market">
       <section>
         <MarketNav products={products} setProductCategory={setProductCategory}/>
-        <DisplayProducts products={products} productCategoty={productCategoty}/> 
+        <DisplayProducts products={products} productCategory={productCategory}/> 
       </section>
 
       Cart component here
