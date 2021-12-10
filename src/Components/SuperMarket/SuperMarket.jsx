@@ -9,7 +9,7 @@ import { products } from '../../data/market-data'
 
 
 
-const SuperMarket = () => {
+const SuperMarket = (props) => {
   
   const[cart,setCart]=useState([])
   const[productCategory, setProductCategory]= useState('Produce')
@@ -34,6 +34,7 @@ const SuperMarket = () => {
 
 
 
+
   return (
     <div className="super-market">
       <section>
@@ -45,7 +46,8 @@ const SuperMarket = () => {
       <Cart 
       cart={cart}
       removeFromCart={removeFromCart}
-      setCart={setCart}/>
+      setCart={setCart}
+      handleExchange={props.handleExchange}/>
 
     </div>
   )
